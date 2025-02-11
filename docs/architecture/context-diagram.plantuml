@@ -1,0 +1,16 @@
+@startuml
+
+'!theme mono
+'COMMENT - skinparam linetype ortho
+
+actor gamemaster as "Game Master"
+actor player as "Player"
+
+node carpcm as "CARP-CM-5e"
+
+gamemaster -RIGHT-> carpcm : "Managing Characters"
+gamemaster -RIGHT-> carpcm : "Manage Character Data While Game Sessions"
+
+player --> carpcm : "Viewing Current Character Data"
+
+@enduml
