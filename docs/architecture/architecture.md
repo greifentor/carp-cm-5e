@@ -78,7 +78,7 @@ TBD
 
 ### Domain Diagram
 
-TBD
+![domain diagram level 0](./domain-diagram-level-0.png)
 
 
 ## Architecture Decisions

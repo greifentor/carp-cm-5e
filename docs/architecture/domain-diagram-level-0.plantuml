@@ -1,0 +1,31 @@
+@startuml
+
+class Abenteurer
+class Fertigkeit
+class Gegenstand
+class Hintergrund
+class Klasse
+class Merkmal
+class Volk
+class Zauber
+class Zauberliste
+
+Abenteurer "*" -- "1" Hintergrund
+Abenteurer "*" -- "*" Fertigkeit
+Abenteurer "*" -- "*" Gegenstand
+Abenteurer "*" -- "*" Klasse
+Abenteurer "*" -- "*" Merkmal
+Abenteurer "*" -- "1" Volk
+Abenteurer "*" -- "*" Zauber
+
+Zauberliste "*" -- "1" Klasse
+
+Hintergrund "*" -- "*" Merkmal
+
+Klasse "*" -- "*" Merkmal
+
+Volk "*" -- "*" Merkmal
+
+Zauber "*" -- "*" Zauberliste
+
+@enduml
