@@ -18,14 +18,21 @@ Abenteurer "*" -- "*" Merkmal
 Abenteurer "*" -- "1" Volk
 Abenteurer "*" -- "*" Zauber
 
-Zauberliste "*" -- "1" Klasse
+Gegenstand <|-- Ruestung
+Gegenstand <|-- Waffe
 
 Hintergrund "*" -- "*" Merkmal
 
 Klasse "*" -- "*" Merkmal
 
+Merkmal <|-- MerkmalFertigkeit
+Merkmal <|-- MerkmalRuestungsklasse
+Merkmal <|-- MerkmalUebung
+
 Volk "*" -- "*" Merkmal
 
 Zauber "*" -- "*" Zauberliste
+
+Zauberliste "*" -- "1" Klasse
 
 @enduml
