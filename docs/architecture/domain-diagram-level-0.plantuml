@@ -6,6 +6,10 @@ class Gegenstand
 class Hintergrund
 class Klasse
 class Merkmal
+class Merkmalliste
+class MerkmalUebung
+class MerkmalUebungFertigkeit
+class MerkmalUebungGegenstand
 class Volk
 class Zauber
 class Zauberliste
@@ -26,12 +30,23 @@ Hintergrund "*" -- "*" Merkmal
 Klasse "*" -- "*" Merkmal
 
 Merkmal <|-- MerkmalFertigkeit
+Merkmal <|-- Merkmalliste
 Merkmal <|-- MerkmalRuestungsklasse
 Merkmal <|-- MerkmalUebung
+Merkmal <|-- MerkmalZauber
+
+Merkmalliste "*" -- "*" Merkmal
+
+MerkmalUebungFertigkeit "1" -- "1" Fertigkeit
+MerkmalUebungGegenstand "1" -- "1" Gegenstand
+
+MerkmalUebung <|-- MerkmalUebungFertigkeit
+MerkmalUebung <|-- MerkmalUebungGegenstand
 
 Volk "*" -- "*" Merkmal
 
 Zauber "*" -- "*" Zauberliste
+
 
 Zauberliste "*" -- "1" Klasse
 
