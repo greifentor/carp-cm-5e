@@ -6,10 +6,13 @@ class Gegenstand
 class Hintergrund
 class Klasse
 class Merkmal
+class MerkmalAuswahlSprache
 class Merkmalliste
 class MerkmalUebung
 class MerkmalUebungFertigkeit
 class MerkmalUebungGegenstand
+class Merkmalsammlung
+class Sprache
 class Volk
 class Zauber
 class Zauberliste
@@ -19,6 +22,7 @@ Abenteurer "*" -- "*" Fertigkeit
 Abenteurer "*" -- "*" Gegenstand
 Abenteurer "*" -- "*" Klasse
 Abenteurer "*" -- "*" Merkmal
+Abenteurer "*" -- "*" Sprache
 Abenteurer "*" -- "1" Volk
 Abenteurer "*" -- "*" Zauber
 
@@ -33,20 +37,27 @@ Merkmal <|-- MerkmalFertigkeit
 Merkmal <|-- Merkmalliste
 Merkmal <|-- MerkmalRuestungsklasse
 Merkmal <|-- MerkmalUebung
+Merkmal <|-- Merkmalsammlung
 Merkmal <|-- MerkmalZauber
 
+Merkmal <|-- MerkmalAuswahlSprache
+
+MerkmalAuswahlSprache "*" -- "1" Sprache
+
 Merkmalliste "*" -- "*" Merkmal
+
+Merkmalsammlung "*" -- "*" Merkmal
 
 MerkmalUebungFertigkeit "1" -- "1" Fertigkeit
 MerkmalUebungGegenstand "1" -- "1" Gegenstand
 
 MerkmalUebung <|-- MerkmalUebungFertigkeit
 MerkmalUebung <|-- MerkmalUebungGegenstand
+MerkmalZauber "*" -- "1" Zauber
 
 Volk "*" -- "*" Merkmal
 
 Zauber "*" -- "*" Zauberliste
-
 
 Zauberliste "*" -- "1" Klasse
 
